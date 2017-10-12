@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$connection = mysqli_connect("localhost","root","root");
+$connection = mysqli_connect("localhost", "root", "root");
 if (!$connection) {
     die("Database connection failed: " . mysqli_error());
     echo "База недоступна<br/>";
@@ -14,7 +14,7 @@ if (!$db_select) {
 }
 
 $login_logged = mysqli_real_escape_string($connection, $_SESSION['logged_user']);
-$result_reg = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM `user_pass` WHERE `login`='".mysqli_real_escape_string($connection, $login_logged)."' LIMIT 1"));
+$result_reg = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM `user_pass` WHERE `login`='" . mysqli_real_escape_string($connection, $login_logged) . "' LIMIT 1"));
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,8 +32,8 @@ $result_reg = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM `user_
                 echo $_SESSION["logged_user"];
                 ?>
             </td>
-            <td><img height=50px src=' <?php echo "photos/".$result_reg["avatar"] ?>'></td>
-            <td><a href="deauth.php">Выход</a> </td>
+            <td><img height=50px src=' <?php echo "photos/" . $result_reg["avatar"] ?>'></td>
+            <td><a href="deauth.php">Выход</a></td>
         </tr>
         <tr>
             <td>Логин: <?php echo $result_reg["login"] ?> </td>

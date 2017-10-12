@@ -1,8 +1,5 @@
-<?php
-session_start()
-?>
 <!doctype html>
-<html lang="en">
+<html lang="rus">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,7 +8,8 @@ session_start()
     <title>Document</title>
 </head>
 <body>
-<div class="reg"><table border="1" style="border: solid">
+<div class="reg">
+    <table border="1" style="border: solid">
         <tr>
             <th colspan="3">Регистрация</th>
         </tr>
@@ -52,19 +50,19 @@ session_start()
                 <td>Пол</td>
                 <td>Фото</td>
             </tr>
-                <td>
-                    <input type="date" name="date_birth">
-                </td>
-                <td>
-                    <select name="gender">
-                        <option value="male">Мужской</option>
-                        <option value="female">Женский</option>
-                    </select>
+            <td>
+                <input type="date" name="date_birth">
+            </td>
+            <td>
+                <select name="gender">
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
 
-                </td>
-                <td>
-                    <input type="file" name="avatar" accept="image/png,image/jpeg">
-                </td>
+            </td>
+            <td>
+                <input type="file" name="avatar" accept="image/png,image/jpeg">
+            </td>
             <tr>
                 <td>Хобби</td>
                 <td>Статус</td>
