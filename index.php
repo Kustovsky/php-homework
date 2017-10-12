@@ -26,3 +26,4 @@ if (isset($_POST['login']) AND $_POST['pass']) {
     } else header("Location: index.html");
     exit();
 } else header("Location: index.html");
+

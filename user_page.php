@@ -53,7 +53,7 @@ $result_reg = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM `user_
         <tr>
             <td>Статус: <?php echo $result_reg["_status"] ?></td>
             <td>О себе: <?php echo $result_reg["about"] ?></td>
-            <td></td>
+            <td><a href="changes.php">Редактировать</a> </td>
         </tr>
     </table>
 </head>
