@@ -1,2 +1,1 @@
-# avada-kedavra
-php homework
+Some practice in php/html/mysql.
